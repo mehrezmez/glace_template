@@ -15,6 +15,16 @@ body {
     font-family: 'Ubuntu', sans-serif;
     overflow: hidden;
 }
+svg {
+    position: absolute;
+    z-index: -1;
+}
+svg:nth-of-type(1) {
+    top: 0;
+}
+svg:nth-of-type(2) {
+    bottom: 0;
+}
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -53,19 +63,19 @@ body {
     position: absolute;
     width: 200px;
     height: 200px;
-    border-radius: 50%;
-    background: linear-gradient(#03a9f4, #009688);
+    background: linear-gradient(120deg, #dff5ff, #00ffe7aa);
     bottom: -45px;
     left: -90px;
+    border-radius: 42% 61% 55% 42% / 34% 26% 61% 71%;
 }
 .project::after{
     content: "";
     position: absolute;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    background: linear-gradient(#03a9f4, #009688);
+    background: linear-gradient(#dff5ff, #00e2ffaa);
     top: -45px;
+    border-radius: 47% 53% 34% 66% / 47% 41% 59% 53%;
     right: -75px;
     z-index: -1;
 }
@@ -83,7 +93,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-basis: 30%;
-    background-color: rgb(200 249 255);
+    background-color: rgb(200 249 255 / 85%);
     justify-content: space-around;
     align-items: center;
     backdrop-filter: blur(5px);
@@ -207,7 +217,7 @@ body {
     flex-basis: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 20px 50px;
     backdrop-filter: blur(3px);
     background-color: rgb(255 255 255 / 35%);
@@ -227,16 +237,6 @@ body {
         font-size: 21px;
         text-align: center;
     }
-}
-.container  .box-right h2::before {
-    content: "";
-    position: absolute;
-    background: linear-gradient(#a4d6ff, #71efff);
-    width: 55%;
-    height: 20px;
-    border-radius: 20px;
-    top: 55px;
-    left: 0;
 }
 @media (max-width: 991px) {
     .container  .box-right h2::before {
@@ -287,8 +287,7 @@ body {
     margin: 5px 0;
 }
 .container  .box-right .box span {
-    color: #115286;
-    font-weight: bold;
+    color: #009688;
 }
 .container  .box-right .box .text .progress {
     height: 25px;
