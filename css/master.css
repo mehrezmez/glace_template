@@ -287,7 +287,8 @@ body {
     margin: 5px 0;
 }
 .container  .box-right .box span {
-    color: #009688;
+    color: #115286;
+    font-weight: bold;
 }
 .container  .box-right .box .text .progress {
     height: 25px;
