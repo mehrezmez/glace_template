@@ -149,6 +149,7 @@ svg:nth-of-type(2) {
         flex-direction: row;
         flex-wrap: wrap;
 	text-align: center;
+	margin: 10px 0;
     }
 }
 .container  .box-left .content2 .box {
@@ -233,7 +234,7 @@ svg:nth-of-type(2) {
 }
 @media (max-width: 767px) {
     .container  .box-right {
-        padding: 30px 10px;
+        padding: 30px 25px;
     }
 }
 .container  .box-right h2 {
