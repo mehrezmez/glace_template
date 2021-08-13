@@ -1,19 +1,20 @@
-html {
-    overflow: hidden;
-}
+/* html {
+    overflow-x: hidden;
+} */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(90deg, #00bcd4, #03a9f4);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
 }
 svg {
     position: absolute;
@@ -25,11 +26,11 @@ svg:nth-of-type(1) {
 svg:nth-of-type(2) {
     bottom: 0;
 }
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     svg:nth-of-type(2) {
         top: 100%;
     }
-}
+} */
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -37,8 +38,8 @@ svg:nth-of-type(2) {
 }
 @media (max-width: 767px) {
     .project {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 30px;
+        overflow: hidden;
     }
 }
 @media (min-width: 768px) {
@@ -86,7 +87,7 @@ svg:nth-of-type(2) {
 }
 .container {
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
     border-radius: 20px;
 }
 @media (max-width: 767px) {
@@ -109,7 +110,7 @@ svg:nth-of-type(2) {
     .container  .box-left {
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 15px 0;
+        padding: 30px;
     }
 }
 .container  .box-left .content1 {
@@ -146,13 +147,13 @@ svg:nth-of-type(2) {
 @media (max-width: 767px) {
     .container  .box-left .content2 {
         flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 .container  .box-left .content2 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+    margin: 20px 15px;
+    flex-direction: column;
+    flex-basis: 30%;
 }
 @media (max-width: 767px) {
     .container  .box-left .content2 .box {
@@ -167,7 +168,8 @@ svg:nth-of-type(2) {
 }
 @media (max-width: 767px) {
     .container  .box-left .content2 .box i {
-        font-size: 20px;
+        font-size: 35px;
+        margin-bottom: 5px;
     }
 }
 .container  .box-left .content2 .box:nth-of-type(3) i {
@@ -212,7 +214,8 @@ svg:nth-of-type(2) {
 @media (max-width: 767px) {
     .container  .box-left .content3 h3 {
         width: 100%;
-        font-size: 12px;
+        font-size: 15px;
+        margin-bottom: 10px;
     }
     .container .box-left .content3 .image img {
         width: 100%;
@@ -229,7 +232,7 @@ svg:nth-of-type(2) {
 }
 @media (max-width: 767px) {
     .container  .box-right {
-        padding: 10px;
+        padding: 30px 10px;
     }
 }
 .container  .box-right h2 {
@@ -241,16 +244,7 @@ svg:nth-of-type(2) {
     .container  .box-right h2 {
         font-size: 21px;
         text-align: center;
-    }
-}
-@media (max-width: 991px) {
-    .container  .box-right h2::before {
-        width: 75%;
-    }
-}
-@media (max-width: 767px) {
-    .container  .box-right h2::before {
-        display: none;
+        margin-bottom: 10px;
     }
 }
 .container  .box-right .box {
@@ -263,16 +257,19 @@ svg:nth-of-type(2) {
 } 
 @media (max-width: 767px) {
     .container  .box-right .box {
-        padding: 5px;
+        padding: 15px 0;
         margin: 5px 0;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .container  .box-right .box .image {
-        width: 50px;
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
     }    
 }
 .container  .box-right .box .image img {
     border-radius: 50%;
-    width: 100%;
 }
 .container  .box-right .box .text {
     color: #9fb9d5;
@@ -292,7 +289,7 @@ svg:nth-of-type(2) {
     margin: 5px 0;
 }
 .container  .box-right .box span {
-    color: #009688;
+    color: #115286;
 }
 .container  .box-right .box .text .progress {
     height: 25px;
@@ -317,16 +314,22 @@ svg:nth-of-type(2) {
 @media (max-width: 767px) {
     .container  .box-right .box .text {
         text-align: center;
-        flex-basis: 60%;
+        flex-basis: 100%;
     }
     .container  .box-right .box .text h3 {
         font-size: 15px;
     }
     .container  .box-right .box .text p {
         font-size: 11px;
+        margin: 5px 0 15px;
     }
-    .container  .box-right .box .text .progress{
+    .container  .box-right .box .text .progress {
         height: 15px;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .container  .box-right .box span {
+        margin-top: 10px;
     }
 }
 @media (max-width: 320px) {
