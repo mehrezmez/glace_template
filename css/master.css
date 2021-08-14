@@ -214,10 +214,16 @@ svg:nth-of-type(2) {
     line-height: 1.8;
 }
 @media (max-width: 767px) {
+    .container  .box-left .content3 {
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
     .container  .box-left .content3 h3 {
         width: 100%;
         font-size: 15px;
         margin-bottom: 10px;
+	flex-basis: 100%;
     }
     .container .box-left .content3 .image img {
         width: 100%;
